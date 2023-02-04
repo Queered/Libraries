@@ -56,68 +56,68 @@ local bodyParts = {"Head", "Left Arm", "Right Arm", "Left Arm", "Left Leg", "Rig
 -- // Library
 local library = {
     settings = {
-        enabled = false;
+        enabled = true;
         max_distance = 1000;
         box = {
-            enabled = false; 
+            enabled = true; 
             color = color_fromrgb(255, 255, 255);
             outline_color = color_fromrgb(0, 0, 0);
             style = "Square";
             type = "Dynamic";
         };
         healthbar = {
-            enabled = false; 
+            enabled = true; 
             position = "Left";
             empty = color_fromrgb(255, 0, 0);
             color = color_fromrgb(21, 255, 0);
             outline_color = color_fromrgb(0, 0, 0);
         };
         name = {
-            enabled = false; 
+            enabled = true; 
             position = "Top";
             color = color_fromrgb(255, 255, 255);
             outline_color = color_fromrgb(0, 0, 0);
             surround = "";
         };
         viewangle = {
-            enabled = false; 
+            enabled = true; 
             color = color_fromrgb(255, 255, 255);
         };
         distance = {
-            enabled = false; 
+            enabled = true; 
             position = "Bottom";
             color = color_fromrgb(255, 255, 255);
             outline_color = color_fromrgb(0, 0, 0);
             surround = "";
         };
         health = {
-            enabled = false; 
+            enabled = true; 
             position = "Left";
-            more_data = false;
-            auto_color = false;
+            more_data = true;
+            auto_color = true;
             color = color_fromrgb(255, 255, 255);
             outline_color = color_fromrgb(0, 0, 0);
             surround = "";
         };
         weapon = {
-            enabled = false; 
+            enabled = true; 
             position = "Bottom";
             color = color_fromrgb(255, 255, 255);
             outline_color = color_fromrgb(0, 0, 0);
             surround = "";
         };
         chams = {
-            enabled = false; 
+            enabled = true; 
             outline_color = color_fromrgb(0, 0, 0);
             invis_color = Color3.new(1, 0.180392, 0.180392);
             color = Color3.new(0.168627, 1, 0);
             transparency = 0.5;
             outline_transparency = 0;
-            pulse = false;
+            pulse = true;
             type = "Highlight";
         };
         offscreen_arrow = {
-            enabled = false; 
+            enabled = true; 
             color = Color3.new(0.168627, 1, 0);
             invis_color = Color3.new(1, 0.180392, 0.180392);
             outline_color = color_fromrgb(0, 0, 0);
@@ -1085,4 +1085,4 @@ for i,v in pairs(get_players(players)) do library.esp(v) end;
 players.PlayerAdded:Connect(library.esp);
 players.PlayerRemoving:Connect(library.remove);
 
-return Library;
+return library
