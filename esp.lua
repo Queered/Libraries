@@ -1085,4 +1085,4 @@ for i,v in pairs(get_players(players)) do library.esp(v) end;
 players.PlayerAdded:Connect(library.esp);
 players.PlayerRemoving:Connect(library.remove);
 
-return library;
+return Library;
